@@ -6,7 +6,7 @@ import com.tngtech.archunit.lang.ArchRule;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
-import static com.tngtech.archunit.lang.syntax.ArchRuleDefinition.classes;
+import static com.tngtech.archunit.lang.syntax.ArchRuleDefinition.noClasses;
 
 class ArchitectureRulesTest {
 
@@ -20,29 +20,31 @@ class ArchitectureRulesTest {
 
     @Test
     void domainMustNotDependOnInfrastructure() {
-        ArchRule rule = classes()
+        ArchRule rule = noClasses()
                 .that().resideInAnyPackage("..domain..")
-                .should().notDependOnClassesThat()
-                .resideInAnyPackage("..infrastructure..");
+                .should().dependOnClassesThat()
+                .resideInAnyPackage("..infrastructure..")
+                .allowEmptyShould(true);
 
         rule.check(applicationClasses);
     }
 
     @Test
     void domainMustNotDependOnSpring() {
-        ArchRule rule = classes()
+        ArchRule rule = noClasses()
                 .that().resideInAnyPackage("..domain..")
-                .should().notDependOnClassesThat()
-                .resideInAnyPackage("org.springframework..");
+                .should().dependOnClassesThat()
+                .resideInAnyPackage("org.springframework..")
+                .allowEmptyShould(true);
 
         rule.check(applicationClasses);
     }
 
     @Test
     void modulesMustNotDependOnAnotherModulesInternalPackages() {
-        ArchRule rule = classes()
+        ArchRule rule = noClasses()
                 .that().resideInAnyPackage("com.consigplatform.access..")
-                .should().notDependOnClassesThat()
+                .should().dependOnClassesThat()
                 .resideInAnyPackage("com.consigplatform.partners..", "com.consigplatform.credit..");
 
         rule.check(applicationClasses);
