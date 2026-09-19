@@ -11,6 +11,8 @@
 - ArchUnit;
 - OpenAPI documentation.
 
+Phase 1 also establishes the contracts needed to implement this flow safely: API conventions, `AuthorizedPartnerContext`, an explicit proposal state-machine specification, public module contracts, and ArchUnit enforcement. It does **not** implement production-grade idempotency, real margin reservation, or the transactional outbox; those capabilities remain intentionally deferred as described below.
+
 ## Phase 2 — product resilience
 
 - complete OAuth2/OIDC, RBAC, and scopes;

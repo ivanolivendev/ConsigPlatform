@@ -2,6 +2,8 @@
 
 This guide explains **what to build next**, the dependencies between phases, and the evidence required to close each phase. It does not replace the [architecture library](../architecture/README.md).
 
+For the current delivery boundary, read [Phase 1 scope and deferred improvements](phase-1-scope.md). It distinguishes work that belongs in the executable core from resilience, integration, and AI work deliberately deferred to later phases.
+
 ## Delivery rule
 
 Build from foundation to domain and from domain to advanced capabilities:

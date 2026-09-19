@@ -4,10 +4,11 @@ This library guides implementation, review, and product discussion. The [archite
 
 ## Reading paths
 
-- **New developer:** [development guide](development/README.md), [local setup](development/local-setup-and-troubleshooting.md), and [testing strategy](development/testing-strategy.md).
+- **New developer:** [development guide](development/README.md), [Phase 1 scope](development/phase-1-scope.md), [local setup](development/local-setup-and-troubleshooting.md), and [testing strategy](development/testing-strategy.md).
 - **Architect or technical lead:** [architecture overview](architecture/overview.md), [module boundaries](architecture/module-boundaries.md), and [ADRs](architecture/adr/README.md).
 - **Product stakeholder:** [executive product vision](stakeholders/executive-product-vision.md).
 - **Portuguese reference PDFs:** [pt-BR library](pt-BR/README.md).
+- **Implemented versus planned work:** [project status](status.md).
 
 ## Library map
 

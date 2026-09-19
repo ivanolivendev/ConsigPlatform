@@ -12,5 +12,6 @@ Os documentos Markdown do repositório são mantidos em inglês para colaboraç�
 | Estratégia de testes | [estrategia de testes](pdf/estrategia-de-testes.pdf) |
 | Glossário de domínio | [glossário](pdf/glossario-de-dominio.pdf) |
 | Decisões arquiteturais | [ADRs](pdf/decisoes-arquiteturais.pdf) |
+| Escopo atual da Fase 1 | [escopo da fase 1](pdf/escopo-da-fase-1.pdf) |
 
 Os PDFs são materiais de referência. Para decisões e alterações futuras, a versão Markdown em inglês indicada no índice principal continua sendo a fonte operacional do repositório.
